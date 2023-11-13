@@ -39,7 +39,7 @@ public class TravelRecordResource {
 	}
 	
 	@DeleteMapping("/{id}")
-	public  ResponseEntity<Void> delete(@PathVariable("id") String id) {
+	public ResponseEntity<Void> delete(@PathVariable("id") String id) {
 		this.service.delete(id);
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
